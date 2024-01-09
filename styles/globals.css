@@ -18,5 +18,30 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: #ffffff;
+}
+
+.navbar {
+  background-color: #AB3C3C;
+}
+
+.nav-logo {
+  height: 7rem;
+}
+
+h1 {
+  color: #AB3C3C;
+  font-size: 4rem;
+}
+
+.option-box-1:hover, .option-box-2:hover, .option-box-3:hover {
+  cursor: pointer;
+}
+
+#homeContainer {
+  margin-top: 8rem;
+}
+
+.options {
+  margin-top: 3rem;
 }
