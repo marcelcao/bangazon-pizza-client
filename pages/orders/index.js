@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import OrderCard from '../../components/OrderCard';
-import getOrders from '../../utils/data/orderData';
+import { getOrders } from '../../utils/data/orderData';
 import { useAuth } from '../../utils/context/authContext';
 
 function OrdersPage() {
