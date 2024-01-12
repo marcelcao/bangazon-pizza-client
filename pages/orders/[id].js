@@ -36,6 +36,7 @@ function SingleOrder() {
           <section key={`item--${item.id}`} className="item">
             <ItemCard
               itemObj={item}
+              onUpdate={getAllItems}
             />
           </section>
         ))}

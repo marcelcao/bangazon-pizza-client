@@ -27,8 +27,22 @@ const getItemsOnSingleOrder = (id) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const removeOrderItem = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/orderitems/${id}`, {
+    method: 'DELETE',
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      resolve();
+    })
+    .catch(reject);
+});
+
 export {
   getOrders,
   getSingleOrder,
   getItemsOnSingleOrder,
+  removeOrderItem,
 };
