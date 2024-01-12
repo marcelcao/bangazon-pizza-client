@@ -1,10 +1,11 @@
 import { clientCredentials } from '../client';
 
-const getOrders = () => new Promise((resolve, reject) => {
+const getOrders = (uid) => new Promise((resolve, reject) => {
   fetch(`${clientCredentials.databaseURL}/orders`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
+      Authorization: `${uid}`,
     },
   })
     .then((response) => response.json())
@@ -26,8 +27,22 @@ const getItemsOnSingleOrder = (id) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const removeOrderItem = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/orderitems/${id}`, {
+    method: 'DELETE',
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      resolve();
+    })
+    .catch(reject);
+});
+
 export {
   getOrders,
   getSingleOrder,
   getItemsOnSingleOrder,
+  removeOrderItem,
 };
