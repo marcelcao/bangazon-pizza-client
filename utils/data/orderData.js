@@ -40,9 +40,23 @@ const removeOrderItem = (id) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const addItemsToOrder = (payload) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/orderitems`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 export {
   getOrders,
   getSingleOrder,
   getItemsOnSingleOrder,
   removeOrderItem,
+  addItemsToOrder,
 };

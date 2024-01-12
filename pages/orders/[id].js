@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Button from 'react-bootstrap/Button';
 import { getSingleOrder, getItemsOnSingleOrder } from '../../utils/data/orderData';
 import ItemCard from '../../components/ItemCard';
 
@@ -40,6 +42,9 @@ function SingleOrder() {
             />
           </section>
         ))}
+        <Link href={`/orders/add/${id}`} passHref>
+          <Button variant="primary" className="add-prods-btn">ADD ITEMS</Button>
+        </Link>
       </div>
     </article>
   );
