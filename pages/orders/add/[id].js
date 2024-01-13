@@ -63,7 +63,7 @@ function AddOrderItems() {
       <div className="add-item-container">
         <div>
           <h2 className="order-category">
-            Add Products to {orderDetails.order_name}
+            Add Items to {orderDetails.order_name}
           </h2>
           <div className="menu-items">
             {items.map((item) => (
