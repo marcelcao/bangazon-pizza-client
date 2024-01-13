@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import Link from 'next/link';
+import Button from 'react-bootstrap/Button';
 import { Card } from 'react-bootstrap';
 
 export default function OrderCard({ orderObj }) {
@@ -12,6 +14,11 @@ export default function OrderCard({ orderObj }) {
           <Card.Title>Customer Email: {orderObj.customer_email}</Card.Title>
           <Card.Text>Order Type: {orderObj.order_type.category}</Card.Text>
           <Card.Text>Order Status: {orderObj.is_closed}</Card.Text>
+          <Link href={`/orders/${orderObj.id}`} passHref>
+            <Button variant="primary" className="m-2">
+              View
+            </Button>
+          </Link>
         </Card.Body>
       </Card>
     </>

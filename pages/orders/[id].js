@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
-import { getSingleOrder, getItemsOnSingleOrder } from '../../utils/data/orderData';
+import { getSingleOrder, getItemsOnSingleOrder, deleteOrder } from '../../utils/data/orderData';
 import ItemCard from '../../components/ItemCard';
 
 function SingleOrder() {
@@ -14,6 +14,14 @@ function SingleOrder() {
 
   const getAllItems = () => {
     getItemsOnSingleOrder(id).then((data) => setItems(data));
+  };
+
+  const deleteThisOrder = () => {
+    if (window.confirm('Delete Order?')) {
+      deleteOrder(id).then(() => {
+        router.push('/');
+      });
+    }
   };
 
   useEffect(() => {
@@ -31,6 +39,7 @@ function SingleOrder() {
         <p>Customer phone: {singleOrder.customer_phone}</p>
         <p>Order Type: {singleOrder.order_type?.category}</p>
         <p>Order Status: {singleOrder.is_closed}</p>
+        <Button className="delete-button" variant="red" onClick={deleteThisOrder}>Delete Order</Button>
       </div>
       <div>
         <h2>Order Items:</h2>

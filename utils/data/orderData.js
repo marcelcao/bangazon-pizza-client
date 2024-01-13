@@ -53,10 +53,24 @@ const addItemsToOrder = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteOrder = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/orders/${id}`, {
+    method: 'DELETE',
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      resolve();
+    })
+    .catch(reject);
+});
+
 export {
   getOrders,
   getSingleOrder,
   getItemsOnSingleOrder,
   removeOrderItem,
   addItemsToOrder,
+  deleteOrder,
 };
