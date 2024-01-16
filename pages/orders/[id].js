@@ -51,6 +51,7 @@ function SingleOrder() {
             />
           </section>
         ))}
+        Total: ${singleOrder.total_order}
         <Link href={`/orders/add/${id}`} passHref>
           <Button variant="primary" className="add-prods-btn">ADD ITEMS</Button>
         </Link>
