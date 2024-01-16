@@ -66,6 +66,37 @@ const deleteOrder = (id) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const createOrder = (order) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/orders`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(order),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      resolve(data);
+    })
+    .catch((error) => {
+      console.error('Create Order Error:', error);
+      reject(error);
+    });
+});
+
+const updateOrder = (payload, uid) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/orders/${payload.id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `${uid}`,
+    },
+    body: JSON.stringify(payload),
+  })
+    .then(resolve)
+    .catch(reject);
+});
+
 export {
   getOrders,
   getSingleOrder,
@@ -73,4 +104,6 @@ export {
   removeOrderItem,
   addItemsToOrder,
   deleteOrder,
+  createOrder,
+  updateOrder,
 };
