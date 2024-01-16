@@ -19,7 +19,7 @@ function SingleOrder() {
   const deleteThisOrder = () => {
     if (window.confirm('Delete Order?')) {
       deleteOrder(id).then(() => {
-        router.push('/');
+        router.push('/orders');
       });
     }
   };
@@ -39,6 +39,12 @@ function SingleOrder() {
         <p>Customer phone: {singleOrder.customer_phone}</p>
         <p>Order Type: {singleOrder.order_type?.category}</p>
         <p>Order Status: {singleOrder.is_closed}</p>
+        <Button
+          onClick={() => {
+            router.push(`/orders/edit/${singleOrder.id}`);
+          }}
+        >Update Info
+        </Button>
         <Button className="delete-button" variant="red" onClick={deleteThisOrder}>Delete Order</Button>
       </div>
       <div>
