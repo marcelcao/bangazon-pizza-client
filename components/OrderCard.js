@@ -14,6 +14,7 @@ export default function OrderCard({ orderObj }) {
           <Card.Title>Customer Email: {orderObj.customer_email}</Card.Title>
           <Card.Text>Order Type: {orderObj.order_type.category}</Card.Text>
           <Card.Text>Order Status: {orderObj.is_closed}</Card.Text>
+          <Card.Text>Total: ${orderObj.total_order}</Card.Text>
           <Link href={`/orders/${orderObj.id}`} passHref>
             <Button variant="primary" className="m-2">
               View
@@ -36,5 +37,6 @@ OrderCard.propTypes = {
       category: PropTypes.string,
     }),
     is_closed: PropTypes.bool.isRequired,
+    total_order: PropTypes.number.isRequired,
   }).isRequired,
 };

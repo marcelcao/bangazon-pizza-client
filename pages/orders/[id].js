@@ -33,6 +33,14 @@ function SingleOrder() {
   return (
     <article className="single-event">
       <div>
+        <div>
+          <Button
+            onClick={() => {
+              router.push(`/orderrevenues/${singleOrder.id}`);
+            }}
+          >Close Order
+          </Button>
+        </div>
         <h1>{singleOrder.order_name}</h1>
         <p>Order Information</p>
         <p>Customer e-mail: {singleOrder.customer_email}</p>

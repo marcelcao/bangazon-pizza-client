@@ -97,6 +97,13 @@ const updateOrder = (payload, uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const closeOrder = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/orderrevenues/${id}/close`)
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
 export {
   getOrders,
   getSingleOrder,
@@ -106,4 +113,5 @@ export {
   deleteOrder,
   createOrder,
   updateOrder,
+  closeOrder,
 };
