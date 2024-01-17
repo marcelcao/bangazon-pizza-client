@@ -20,7 +20,7 @@ function Home() {
             <h2 className="index-h2">Create New Order</h2>
           </div>
         </Link>
-        <Link href="/revenue" passHref>
+        <Link href="/orderrevenues" passHref>
           <div className="option-box-3">
             <h2 className="index-h2">View Revenue</h2>
           </div>
