@@ -34,6 +34,10 @@ h1 {
   font-size: 4rem;
 }
 
+p {
+ color: #636562;
+}
+
 .option-box-1:hover, .option-box-2:hover, .option-box-3:hover {
   cursor: pointer;
 }
@@ -44,4 +48,52 @@ h1 {
 
 .options {
   margin-top: 3rem;
+}
+
+.sign-in-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.pizza-home {
+  height: 100%;
+}
+
+.sign-in-logo {
+  height: 15rem;
+  margin-bottom: 2rem;
+}
+
+.sign-in-copy {
+  margin-top: 7rem;
+  text-align: center;
+  margin-right: 8rem;
+}
+
+.sign-in-footer {
+  color: #636562;
+  position: fixed;
+  bottom: 0;
+  right: 5rem;
+  margin-bottom: 2rem;
+  margin-right: 11rem;
+  text-align: center;
+}
+
+.sign-in-btn {
+  background-color: white;
+  height: 3rem;
+  color:#636562;
+  border-color: #636562;
+}
+
+.sign-in-btn:hover {
+  background-color: #AB3C3C;
+  border-color: #AB3C3C
+}
+.google-button {
+  height: 2rem;
 }
