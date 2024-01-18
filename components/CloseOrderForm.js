@@ -2,9 +2,9 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { getSingleOrder } from '../utils/data/orderData';
+import { closeOrder, getSingleOrder } from '../utils/data/orderData';
 import getPaymentTypes from '../utils/data/paymentTypeData';
-import createRevenue from '../utils/data/orderRevenueData';
+import { createRevenue } from '../utils/data/orderRevenueData';
 
 const initialState = {
   order: 0,
@@ -36,12 +36,15 @@ const CloseOrderForm = ({ obj }) => {
     // Prevent form from being submitted
     e.preventDefault();
 
-    const revenue = {
-      order: Number(order.id),
-      paymentType: Number(currentInfo.paymentType),
-      orderTip: currentInfo.orderTip,
-    };
-    createRevenue(revenue).then(() => router.push('/orders'));
+    closeOrder(id)
+      .then(() => {
+        const revenue = {
+          order: Number(order.id),
+          paymentType: Number(currentInfo.paymentType),
+          orderTip: currentInfo.orderTip,
+        };
+        createRevenue(revenue).then(() => router.push('/orders'));
+      });
   };
 
   return (
