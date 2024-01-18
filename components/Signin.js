@@ -1,27 +1,24 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
+import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { signIn } from '../utils/auth';
 
 function Signin() {
   return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        margin: '0 auto',
-        zIndex: 1,
-        minHeight: '25rem',
-        width: '100%',
-        minWidth: '30rem',
-        paddingBlock: '0 5rem',
-      }}
-    >
-      <h1>Hi there!</h1>
-      <p>Click the button below to login!</p>
-      <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
-        Sign In
-      </Button>
+    <div className="sign-in-container">
+      <div>
+        <img src="/homepagepizza.jpeg" alt="Pizza Splash PAge" className="pizza-home" />
+      </div>
+      <div className="sign-in-copy">
+        <img src="/wangslogo.png" alt="Company Logo" className="sign-in-logo" />
+        <h1>Get the Party Started</h1>
+        <p>Sign in with</p>
+        <Button className="sign-in-btn" onClick={signIn}>
+          <img src="/google.png" alt="google sign in" className="google-button" />Google
+        </Button>
+        <footer className="sign-in-footer">Powered By: Bangazon | Github: <Link href="https://github.com/marcelcao">@marcelcao</Link></footer>
+      </div>
     </div>
   );
 }
