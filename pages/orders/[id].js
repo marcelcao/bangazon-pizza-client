@@ -36,7 +36,7 @@ function SingleOrder() {
         <div>
           <Button
             onClick={() => {
-              router.push(`/orderrevenues/${singleOrder.id}`);
+              router.push(`/orderrevenues/edit/${singleOrder.id}`);
             }}
           >Close Order
           </Button>
@@ -46,7 +46,7 @@ function SingleOrder() {
         <p>Customer e-mail: {singleOrder.customer_email}</p>
         <p>Customer phone: {singleOrder.customer_phone}</p>
         <p>Order Type: {singleOrder.order_type?.category}</p>
-        <p>Order Status: {singleOrder.is_closed}</p>
+        <p>Order Status: {singleOrder.is_closed ? 'Closed' : 'Open'}</p>
         <Button
           onClick={() => {
             router.push(`/orders/edit/${singleOrder.id}`);

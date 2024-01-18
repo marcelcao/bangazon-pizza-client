@@ -13,7 +13,7 @@ export default function OrderCard({ orderObj }) {
           <Card.Title>Customer Phone: {orderObj.customer_phone}</Card.Title>
           <Card.Title>Customer Email: {orderObj.customer_email}</Card.Title>
           <Card.Text>Order Type: {orderObj.order_type.category}</Card.Text>
-          <Card.Text>Order Status: {orderObj.is_closed}</Card.Text>
+          <Card.Text>Order Status: {orderObj.is_closed ? 'Closed' : 'Open'}</Card.Text>
           <Card.Text>Total: ${orderObj.total_order}</Card.Text>
           <Link href={`/orders/${orderObj.id}`} passHref>
             <Button variant="primary" className="m-2">

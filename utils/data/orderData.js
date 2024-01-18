@@ -97,9 +97,20 @@ const updateOrder = (payload, uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const closeOrder = (id) => new Promise((resolve, reject) => {
-  fetch(`${clientCredentials.databaseURL}/orderrevenues/${id}/close`)
-    .then((response) => response.json())
+const closeOrder = (id, uid) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/orderrevenues/${id}/close`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `${uid}`,
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then(resolve)
     .catch(reject);
 });
