@@ -34,12 +34,15 @@ function SingleOrder() {
     <article className="single-event">
       <div>
         <div>
-          <Button
-            onClick={() => {
-              router.push(`/orderrevenues/edit/${singleOrder.id}`);
-            }}
-          >Close Order
-          </Button>
+          {!singleOrder.is_closed && (
+            <Button
+              onClick={() => {
+                router.push(`/orderrevenues/${singleOrder.id}`);
+              }}
+            >
+              Close Order
+            </Button>
+          )}
         </div>
         <h1>{singleOrder.order_name}</h1>
         <p>Order Information</p>
@@ -47,13 +50,20 @@ function SingleOrder() {
         <p>Customer phone: {singleOrder.customer_phone}</p>
         <p>Order Type: {singleOrder.order_type?.category}</p>
         <p>Order Status: {singleOrder.is_closed ? 'Closed' : 'Open'}</p>
-        <Button
-          onClick={() => {
-            router.push(`/orders/edit/${singleOrder.id}`);
-          }}
-        >Update Info
-        </Button>
-        <Button className="delete-button" variant="red" onClick={deleteThisOrder}>Delete Order</Button>
+        {!singleOrder.is_closed && (
+          <Button
+            onClick={() => {
+              router.push(`/orders/edit/${singleOrder.id}`);
+            }}
+          >Update Info
+          </Button>
+        )}
+        {!singleOrder.is_closed && (
+          <Button
+            onClick={deleteThisOrder}
+          >Delete Order
+          </Button>
+        )}
       </div>
       <div>
         <h2>Order Items:</h2>
@@ -66,9 +76,11 @@ function SingleOrder() {
           </section>
         ))}
         Total: ${singleOrder.total_order}
+        {!singleOrder.is_closed && (
         <Link href={`/orders/add/${id}`} passHref>
           <Button variant="primary" className="add-prods-btn">ADD ITEMS</Button>
         </Link>
+        )}
       </div>
     </article>
   );
