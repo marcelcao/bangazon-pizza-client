@@ -27,7 +27,6 @@ const getItemsOnSingleOrder = (id) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-
 const removeOrderItem = (id) => new Promise((resolve, reject) => {
   fetch(`${clientCredentials.databaseURL}/orderitems/${id}`, {
     method: 'DELETE',

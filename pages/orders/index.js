@@ -16,13 +16,15 @@ function OrdersPage() {
   }, []);
 
   return (
-    <article className="events">
+    <article className="orders">
       <h1>Your Orders</h1>
-      {orders.map((order) => (
-        <section key={`event--${order.id}`} className="order">
-          <OrderCard orderObj={order} />
-        </section>
-      ))}
+      <div className="order-cards">
+        {orders.map((order) => (
+          <section key={`event--${order.id}`} className="order">
+            <OrderCard orderObj={order} />
+          </section>
+        ))}
+      </div>
     </article>
   );
 }

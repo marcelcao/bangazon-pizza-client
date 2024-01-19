@@ -23,7 +23,7 @@ export default function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
-            <Button variant="danger" onClick={signOut}>
+            <Button variant="danger" className="sign-out-btn" onClick={signOut}>
               Sign Out
             </Button>
           </Nav>
