@@ -10,6 +10,12 @@ export default function RevenueTotals() {
     getRevenues(user.uid).then((data) => setRevenues(data));
   };
 
+  const addOrderTotal = () => {
+    const totals = revenues.map((revenue) => revenue.total_values);
+    const sum = totals.reduce((acc, value) => acc + value, 0);
+    return sum;
+  };
+
   const getCheckRevenues = () => {
     const foundRevenue = revenues.find((revenue) => revenue.payment_type.id === 2);
     if (foundRevenue) {
@@ -45,6 +51,20 @@ export default function RevenueTotals() {
     } return 0;
   };
 
+  const getPhoneRevenues = () => {
+    const foundRevenue = revenues.find((revenue) => revenue.order.order_type === 1);
+    if (foundRevenue) {
+      return foundRevenue.order_category;
+    } return 0;
+  };
+
+  const getInPersonRevenues = () => {
+    const foundRevenue = revenues.find((revenue) => revenue.order.order_type === 2);
+    if (foundRevenue) {
+      return foundRevenue.order_category;
+    } return 0;
+  };
+
   useEffect(() => {
     getAllRevenue();
   }, []);
@@ -53,14 +73,14 @@ export default function RevenueTotals() {
     <>
       <div>
         <h1>Revenue</h1>
+        <h2>Total Orders: ${addOrderTotal()} </h2>
         {revenues.length > 0 && (
           <>
-            <h2>Total Orders: </h2>
             <h2>Total Tips: ${revenues[0].total_tips}</h2>
           </>
         )}
-        <h2>Total Phone Orders:</h2>
-        <h2>Total In-Person Orders:</h2>
+        <h2>Total Phone Orders: {getPhoneRevenues()}</h2>
+        <h2>Total In-Person Orders: {getInPersonRevenues()}</h2>
         <h2>Payments Made with Check: {getCheckRevenues()}</h2>
         <h2>Payments Made with Cash: {getCashRevenues()}</h2>
         <h2>Payments Made with Debit: {getDebitRevenues()}</h2>
