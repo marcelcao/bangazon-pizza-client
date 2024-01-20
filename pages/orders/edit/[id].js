@@ -15,6 +15,7 @@ export default function EditOrder() {
 
   return (
     <>
+      <h1 className="create-title">Update Order</h1>
       <OrderForm orderObj={editOrder} />
     </>
   );

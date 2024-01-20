@@ -323,15 +323,38 @@ p {
   border-color:#636562;
 }
 
-.order-update-btn, .add-items-btn {
+.order-update-btn, .add-items-btn, .add-order-items-btn, .order-enter-btn, .close-order-btn {
   color:#AB3C3C;
   background-color: white;
   border-color: #636562;
   margin-bottom: .5rem;
 }
 
-.order-update-btn:hover, .add-items-btn:hover {
+.add-order-items-btn, .order-enter-btn, .close-order-btn {
+  margin-left: 70rem;
+  margin-top: 2rem;
+  height: 3rem;
+  font-size: large;
+}
+
+.order-update-btn:hover, .add-items-btn:hover, .order-enter-btn:hover, .close-order-btn:hover {
   background-color:#AB3C3C;
   color: white;
   border-color: #AB3C3C;
+}
+
+.add-item-container, .order-form, .close-out, .rev-title {
+  margin-top: 2rem;
+}
+
+.order-category, .create-title, .close-out, .rev-title {
+  text-align: center;
+}
+
+.menu-items, .create-title {
+  margin-top: 1rem;
+}
+
+.checkform, .rev-items {
+  border: .5px solid #999999;
 }
