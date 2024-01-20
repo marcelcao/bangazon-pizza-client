@@ -7,19 +7,21 @@ import { Card } from 'react-bootstrap';
 export default function OrderCard({ orderObj }) {
   return (
     <>
-      <Card className="text-center">
-        <Card.Header>{orderObj.order_name}</Card.Header>
-        <Card.Body>
-          <Card.Title>Customer Phone: {orderObj.customer_phone}</Card.Title>
-          <Card.Title>Customer Email: {orderObj.customer_email}</Card.Title>
+      <Card className="order-card">
+        <Card.Header className="card-top">{orderObj.order_name}</Card.Header>
+        <Card.Body className="card-body">
+          <Card.Text>Customer Phone: {orderObj.customer_phone}</Card.Text>
+          <Card.Text>Customer Email: {orderObj.customer_email}</Card.Text>
           <Card.Text>Order Type: {orderObj.order_type.category}</Card.Text>
           <Card.Text>Order Status: {orderObj.is_closed ? 'Closed' : 'Open'}</Card.Text>
           <Card.Text>Total: ${orderObj.total_order}</Card.Text>
-          <Link href={`/orders/${orderObj.id}`} passHref>
-            <Button variant="primary" className="m-2">
-              View
-            </Button>
-          </Link>
+          <div className="order-btn-container">
+            <Link href={`/orders/${orderObj.id}`} passHref>
+              <Button className="view-order-btn">
+                View Details
+              </Button>
+            </Link>
+          </div>
         </Card.Body>
       </Card>
     </>

@@ -72,20 +72,20 @@ export default function RevenueTotals() {
   return (
     <>
       <div>
-        <h1>Revenue</h1>
-        <h2>Total Orders: ${addOrderTotal()} </h2>
+        <h1 className="rev-title">Revenue</h1>
+        <h3 className="rev-items">Total Orders: ${addOrderTotal()} </h3>
         {revenues.length > 0 && (
           <>
-            <h2>Total Tips: ${revenues[0].total_tips}</h2>
+            <h3 className="rev-items">Total Tips: ${revenues[0].total_tips}</h3>
           </>
         )}
-        <h2>Total Phone Orders: {getPhoneRevenues()}</h2>
-        <h2>Total In-Person Orders: {getInPersonRevenues()}</h2>
-        <h2>Payments Made with Check: {getCheckRevenues()}</h2>
-        <h2>Payments Made with Cash: {getCashRevenues()}</h2>
-        <h2>Payments Made with Debit: {getDebitRevenues()}</h2>
-        <h2>Payments Made with Credit: {getCreditRevenues()}</h2>
-        <h2>Payments Made with Mobile: {getMobileRevenues()}</h2>
+        <h3 className="rev-items">Total Phone Orders: {getPhoneRevenues()}</h3>
+        <h3 className="rev-items">Total In-Person Orders: {getInPersonRevenues()}</h3>
+        <h3 className="rev-items">Payments Made with Check: {getCheckRevenues()}</h3>
+        <h3 className="rev-items">Payments Made with Cash: {getCashRevenues()}</h3>
+        <h3 className="rev-items">Payments Made with Debit: {getDebitRevenues()}</h3>
+        <h3 className="rev-items">Payments Made with Credit: {getCreditRevenues()}</h3>
+        <h3 className="rev-items">Payments Made with Mobile: {getMobileRevenues()}</h3>
       </div>
     </>
   );

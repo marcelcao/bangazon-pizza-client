@@ -62,9 +62,9 @@ function AddOrderItems() {
     <>
       <div className="add-item-container">
         <div>
-          <h2 className="order-category">
+          <h1 className="order-category">
             Add Items to {orderDetails.order_name}
-          </h2>
+          </h1>
           <div className="menu-items">
             {items.map((item) => (
               <Form key={item.id}>
@@ -76,7 +76,7 @@ function AddOrderItems() {
               </Form>
             ))}
           </div>
-          <Button onClick={handleSubmit} className="add-items-btn">Add Items</Button>
+          <Button onClick={handleSubmit} className="add-order-items-btn">Add Items</Button>
         </div>
       </div>
     </>

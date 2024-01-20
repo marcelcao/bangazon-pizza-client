@@ -16,7 +16,7 @@ export default function CloseOrder() {
 
   return (
     <>
-      Close Out {singleOrder.order_name}
+      <h1 className="close-out">Close Out {singleOrder.order_name}</h1>
       <CloseOrderForm />
     </>
   );

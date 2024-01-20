@@ -26,6 +26,9 @@ function Home() {
           </div>
         </Link>
       </div>
+      <div className="main-footer">
+        <footer>Powered By: Bangazon | Github: <Link href="https://github.com/marcelcao">@marcelcao</Link></footer>
+      </div>
     </div>
   );
 }

@@ -33,12 +33,10 @@ const OrderForm = ({ orderObj }) => {
         adminUser: user.uid,
       });
     }
-    console.warn(setCurrentOrder);
   }, [orderObj, user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.warn(name, value);
     setCurrentOrder((prevState) => ({
       ...prevState,
       [name]: value,
@@ -72,10 +70,10 @@ const OrderForm = ({ orderObj }) => {
   };
 
   return (
-    <>
+    <div className="order-form-container">
       <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3">
-          <Form.Label>Order Name</Form.Label>
+        <Form.Group>
+          <Form.Label className="order-form">Order Name</Form.Label>
           <Form.Control name="orderName" placeholder="Enter Order Name Here" required value={currentOrder.orderName} onChange={handleChange} />
         </Form.Group>
         <Form.Group className="mb-3">
@@ -102,9 +100,9 @@ const OrderForm = ({ orderObj }) => {
             ))}
           </Form.Select>
         </Form.Group>
-        <Button variant="primary" type="submit"> {orderObj.id ? 'Update' : 'Create'} Order </Button>
+        <Button variant="primary" type="submit" className="order-enter-btn"> {orderObj.id ? 'Update' : 'Create'} Order </Button>
       </Form>
-    </>
+    </div>
   );
 };
 

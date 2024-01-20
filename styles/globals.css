@@ -34,6 +34,12 @@ h1 {
   font-size: 4rem;
 }
 
+h2 {
+  color: #AB3C3C;
+  font-size: 2rem;
+}
+
+
 p {
  color: #636562;
 }
@@ -43,7 +49,8 @@ p {
 }
 
 #homeContainer {
-  margin-top: 8rem;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
 }
 
 .options {
@@ -92,8 +99,262 @@ p {
 
 .sign-in-btn:hover {
   background-color: #AB3C3C;
-  border-color: #AB3C3C
+  border-color: #AB3C3C;
 }
 .google-button {
   height: 2rem;
+}
+
+.me-auto {
+  margin-left: 65rem;
+}
+
+.option-box-1, .option-box-2, .option-box-3 {
+  padding: 2rem;
+  position: relative;
+  border: solid #b9b9b9;
+  border-width: .1px;
+}
+
+.option-box-1::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .5;
+  background-image: url("https://images.pexels.com/photos/16586524/pexels-photo-16586524/free-photo-of-pizza-served-in-a-restaurant.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-size: cover;
+  background-position: 19%;
+}
+
+.option-box-2::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .5;
+  background-image: url("https://images.pexels.com/photos/1038332/pexels-photo-1038332.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background-size: cover;
+  background-position: 40%;
+}
+
+.option-box-3::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .5;
+  background-image: url("https://images.pexels.com/photos/17626467/pexels-photo-17626467/free-photo-of-pizza-boxes-in-a-restaurant.jpeg");
+  background-size: cover;
+  background-position: 5%;
+}
+
+.option-box-1:hover, .option-box-2:hover, .option-box-3:hover, .view-order-btn:hover {
+  background-color: #ff8b8b;
+  cursor: pointer;
+}
+
+.index-h2 {
+  isolation: isolate;
+  color: rgb(36, 36, 36);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(41, 41, 41);
+  font-size: 2.5rem;
+}
+
+.main-footer {
+  margin-top: 1rem;
+}
+
+.card-top {
+  background-color: #E69D38;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.card-body {
+  background-color: #D9D9D9;
+}
+
+.order-card {
+  text-align: left;
+  height: 21rem;
+  width: 25rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.order-cards {
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  justify-content: left;
+  display: flex;
+  flex-basis: 33%;
+  flex-grow: 2;
+  flex-wrap: wrap;
+}
+
+.orders {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-order-btn, .sign-out-btn {
+  background-color: white;
+  height: 2rem;
+  color: #AB3C3C;
+  border-color: white;
+  font-size: small;
+}
+
+.sign-out-btn {
+  background-color: white;
+  height: 3rem;
+  color: #AB3C3C;
+  border-color: white;
+  font-size: large;
+}
+
+
+.order-btn-container {
+  display: flex;
+  justify-content: right;
+}
+
+.single-event {
+  margin-top: 2rem;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.order-info-title {
+  margin-bottom: 2rem;
+}
+
+.close-order-btn {
+  color: white;
+  height: 4rem;
+  background-color: #AB3C3C;
+  border-color: #AB3C3C;
+}
+
+.close-order-btn:hover {
+  background-color: white;
+  border-color: #636562;
+  color: #AB3C3C;
+  cursor: pointer;
+}
+
+.item-card, .item-card-body, .item-card-header {
+  background-color: white;
+  color: #636562;
+}
+
+.item-card {
+  width: 45rem;
+  font-size: medium;
+}
+
+.item-card-title {
+  font-size: medium;
+}
+
+.item-btns {
+  width: 2rem;
+  height: 2rem;
+  font-size: small;
+  text-align: center;
+  color: #AB3C3C;
+  background-color: white;
+  border-color: white;
+  font-weight: bolder;
+}
+
+.item-btns:hover {
+  background-color: #AB3C3C;
+  color: white;
+  border-color: #AB3C3C;
+}
+
+.item-card-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+}
+
+.total {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.order-info-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.delete-order-btn {
+  background-color: #AB3C3C;
+  border-color: #AB3C3C;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.delete-order-btn:hover {
+  color: #AB3C3C;
+  background-color: white;
+  background-color: white;
+  border-color:#636562;
+}
+
+.order-update-btn, .add-items-btn, .add-order-items-btn, .order-enter-btn, .close-order-btn {
+  color:#AB3C3C;
+  background-color: white;
+  border-color: #636562;
+  margin-bottom: .5rem;
+}
+
+.add-order-items-btn, .order-enter-btn, .close-order-btn {
+  margin-left: 70rem;
+  margin-top: 2rem;
+  height: 3rem;
+  font-size: large;
+}
+
+.order-update-btn:hover, .add-items-btn:hover, .order-enter-btn:hover, .close-order-btn:hover {
+  background-color:#AB3C3C;
+  color: white;
+  border-color: #AB3C3C;
+}
+
+.add-item-container, .order-form, .close-out, .rev-title {
+  margin-top: 2rem;
+}
+
+.order-category, .create-title, .close-out, .rev-title {
+  text-align: center;
+}
+
+.menu-items, .create-title {
+  margin-top: 1rem;
+}
+
+.checkform, .rev-items {
+  border: .5px solid #999999;
 }

@@ -70,7 +70,7 @@ const CloseOrderForm = ({ obj }) => {
             ))}
           </Form.Select>
         </Form.Group>
-        <Button variant="primary" type="submit"> Enter </Button>
+        <Button className="close-order-btn" type="submit"> Close Order </Button>
       </Form>
     </>
   );
