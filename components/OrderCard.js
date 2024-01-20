@@ -15,11 +15,13 @@ export default function OrderCard({ orderObj }) {
           <Card.Text>Order Type: {orderObj.order_type.category}</Card.Text>
           <Card.Text>Order Status: {orderObj.is_closed ? 'Closed' : 'Open'}</Card.Text>
           <Card.Text>Total: ${orderObj.total_order}</Card.Text>
-          <Link href={`/orders/${orderObj.id}`} passHref>
-            <Button variant="primary" className="m-2">
-              View
-            </Button>
-          </Link>
+          <div className="order-btn-container">
+            <Link href={`/orders/${orderObj.id}`} passHref>
+              <Button className="view-order-btn">
+                View Details
+              </Button>
+            </Link>
+          </div>
         </Card.Body>
       </Card>
     </>

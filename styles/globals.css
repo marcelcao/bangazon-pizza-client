@@ -34,6 +34,12 @@ h1 {
   font-size: 4rem;
 }
 
+h2 {
+  color: #AB3C3C;
+  font-size: 2rem;
+}
+
+
 p {
  color: #636562;
 }
@@ -149,7 +155,7 @@ p {
   background-position: 5%;
 }
 
-.option-box-1:hover, .option-box-2:hover, .option-box-3:hover {
+.option-box-1:hover, .option-box-2:hover, .option-box-3:hover, .view-order-btn:hover {
   background-color: #ff8b8b;
   cursor: pointer;
 }
@@ -198,4 +204,134 @@ p {
 .orders {
   text-align: center;
   margin-top: 2rem;
+}
+
+.view-order-btn, .sign-out-btn {
+  background-color: white;
+  height: 2rem;
+  color: #AB3C3C;
+  border-color: white;
+  font-size: small;
+}
+
+.sign-out-btn {
+  background-color: white;
+  height: 3rem;
+  color: #AB3C3C;
+  border-color: white;
+  font-size: large;
+}
+
+
+.order-btn-container {
+  display: flex;
+  justify-content: right;
+}
+
+.single-event {
+  margin-top: 2rem;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.order-info-title {
+  margin-bottom: 2rem;
+}
+
+.close-order-btn {
+  color: white;
+  height: 4rem;
+  background-color: #AB3C3C;
+  border-color: #AB3C3C;
+}
+
+.close-order-btn:hover {
+  background-color: white;
+  border-color: #636562;
+  color: #AB3C3C;
+  cursor: pointer;
+}
+
+.item-card, .item-card-body, .item-card-header {
+  background-color: white;
+  color: #636562;
+}
+
+.item-card {
+  width: 45rem;
+  font-size: medium;
+}
+
+.item-card-title {
+  font-size: medium;
+}
+
+.item-btns {
+  width: 2rem;
+  height: 2rem;
+  font-size: small;
+  text-align: center;
+  color: #AB3C3C;
+  background-color: white;
+  border-color: white;
+  font-weight: bolder;
+}
+
+.item-btns:hover {
+  background-color: #AB3C3C;
+  color: white;
+  border-color: #AB3C3C;
+}
+
+.item-card-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+}
+
+.total {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.order-info-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.delete-order-btn {
+  background-color: #AB3C3C;
+  border-color: #AB3C3C;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.delete-order-btn:hover {
+  color: #AB3C3C;
+  background-color: white;
+  background-color: white;
+  border-color:#636562;
+}
+
+.order-update-btn, .add-items-btn {
+  color:#AB3C3C;
+  background-color: white;
+  border-color: #636562;
+  margin-bottom: .5rem;
+}
+
+.order-update-btn:hover, .add-items-btn:hover {
+  background-color:#AB3C3C;
+  color: white;
+  border-color: #AB3C3C;
 }
