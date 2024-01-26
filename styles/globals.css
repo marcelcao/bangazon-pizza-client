@@ -330,10 +330,18 @@ p {
   margin-bottom: .5rem;
 }
 
-.add-order-items-btn, .order-enter-btn, .close-order-btn {
+.add-order-items-btn, .order-enter-btn {
   margin-left: 70rem;
   margin-top: 2rem;
   height: 3rem;
+  font-size: large;
+}
+
+.close-order-btn {
+  margin-right: 2rem;
+  margin-top: 2rem;
+  height: 3rem;
+  width: 10rem;
   font-size: large;
 }
 
