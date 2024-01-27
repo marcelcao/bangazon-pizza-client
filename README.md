@@ -13,7 +13,14 @@ Hip Hop, Pizza, and Wangs is a beloved community restaurant that embodies the fu
 - Cashier can view total orders revenue
 
 ## Video Walkthrough
-- [Loom Video](https://www.loom.com/share/0e47ab7362c24d86a719ccba8f82c049?sid=3fb704ef-f755-4dd9-8887-f2551bea6d38)
+<div>
+    <a href="https://www.loom.com/share/0e47ab7362c24d86a719ccba8f82c049">
+      <p>Hip Hop Pizza and Wings Point of Sale Application - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/0e47ab7362c24d86a719ccba8f82c049">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0e47ab7362c24d86a719ccba8f82c049-with-play.gif">
+    </a>
+  </div>
 
 ## Relevant Links 
 - [Server Side Repo](https://github.com/marcelcao/bangazon-pizza-server)
