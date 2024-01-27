@@ -1,44 +1,42 @@
-# React/Next.js Django Auth Template
+# Bangazon - HipHop Pizza and Wangs (POS Application) - Client Side
+Hip Hop, Pizza, and Wangs is a beloved community restaurant that embodies the fusion of music and food. They've been serving the community for over 30 years, and now they're looking to modernize their operations with a POS system. 
 
-## Topics
-- [Get Started](#getting-started)
-- [Starting the Project](#starting-the-project)
-___
-## Getting Started
-### Use Template
-#### 1. To get started, click the GREEN "Use this Template" button at the top of the repo
-<img width="915" alt="Screen Shot 2022-07-06 at 12 54 01 PM" src="https://user-images.githubusercontent.com/29741570/177612998-4aac9237-5a1e-4f13-8ae0-468587521564.png">
+## About the User 
+- This application is a Point of Sale Application used by cashiers to manage customer orders for HipHop Pizza and Wangs.
 
-#### 2. Make sure YOUR github account is selected in the dropdown and name your project
-<img width="763" alt="Screen Shot 2022-07-06 at 12 54 48 PM" src="https://user-images.githubusercontent.com/29741570/177613126-dd38f678-7553-4f27-8a4a-75680f14d71e.png">
+## Features 
+- Google Firebase authentication
+- Local database
+- Cashier can create, read, update and delete customer orders
+- Cashier can add menu items to orders
+- Cashier can close out orders with tips and payment type
+- Cashier can view total orders revenue
 
-#### 3. Clone your new repo to your local machine
-#### 4. Go to the **NEXT** section
+## Video Walkthrough
+- [Loom Video](https://www.loom.com/share/0e47ab7362c24d86a719ccba8f82c049?sid=3fb704ef-f755-4dd9-8887-f2551bea6d38)
 
-## Starting the Project
-1. Create a Firebase project and set up authentication. Use [these videos](https://vimeo.com/showcase/codetracker-firebase) as a refresher if needed.
-1. Create a `.env` file at the root of the project
-1. Copy/Paste the contents of the `.env.sample` file to your newly created `.env` file.
-1. Copy over all of your Firebase values into the `.env` file.
-1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
-1. From your command line, be in the root directory and run `npm install` OR `npm i` for short.
-1. Next, run `npm run prepare`. This command sets up husky to track eslint errors on commit that will make your deploy fail on Netlify.
-1. To start your application, run `npm run dev`. THIS IS THE COMMAND YOU WILL USE TO RUN YOUR DEVELOPMENT SERVER FROM NOW ON.
-1. Open [http://localhost:3000](http://localhost:3000) with your browser.
+## Relevant Links 
+- [Server Side Repo](https://github.com/marcelcao/bangazon-pizza-server)
+- [Figma Wireframe](https://dbdiagram.io/d/Bangazon-HipHop-Pizza-Wangs-6594b81dac844320ae217206)
+- [ERD](https://dbdiagram.io/d/Bangazon-HipHop-Pizza-Wangs-6594b81dac844320ae217206)
+- [Project Board](https://github.com/users/marcelcao/projects/6)
 
-### If you see this, you are set to go!
-<img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://user-images.githubusercontent.com/29741570/177615077-9b6a75bc-0260-4d29-bb88-bd95a3140687.png">
+## Project Screenshots 
+<img width="1912" alt="Screenshot 2024-01-27 at 9 58 07 AM (2)" src="https://github.com/marcelcao/bangazon-pizza-client/assets/123406421/f3b2f76f-03c2-4219-89e6-14c4e3a1cce4">
+<img width="1901" alt="Screenshot 2024-01-27 at 9 58 20 AM (2)" src="https://github.com/marcelcao/bangazon-pizza-client/assets/123406421/0cf66a4c-5677-47d1-990d-e776895b0394">
+<img width="1920" alt="Screenshot 2024-01-27 at 9 58 26 AM (2)" src="https://github.com/marcelcao/bangazon-pizza-client/assets/123406421/b3d2d671-7633-4092-82cd-777920a79ec6">
 
+## Tech Stack
+- ReactJS
+- Javascript
+- Python
+- Django
+- Google Firebase
+- Figma
+- React Bootstrap
+- CSS
+- Adobe Illustrator
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contributors
+- Mara Caoile (https://github.com/marcelcao)
 
-**NOTES:** 
-- If you see the following error, you did not follow all the setup steps correctly and failed to add your Firebase creds. Go back and do that NOW.
-
-<img width="1043" alt="Screen Shot 2022-07-06 at 11 18 45 AM" src="https://user-images.githubusercontent.com/29741570/177612501-c2628f18-4bbd-4de9-aae6-27ffba1172d6.png">
-        
-## Learn More about Next.js
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
